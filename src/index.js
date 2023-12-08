@@ -1,6 +1,5 @@
 const { Sequelize, DataTypes } = require("sequelize");
 
-
 // É NECESSÁRIO CRIAR O BANCO DE DADOS COM O RESPECTIVO NOME NA VARIÁVEL LOGO ABAIXO
 const database = "atv4"; // Nome do banco de dados (por padrão definido atv4)
 const username = "root"; // Usuário do banco de dados (por padrão definido root)
@@ -47,6 +46,7 @@ const Post = sequelize.define("Post", {
 // Chave estrangeira do usuário na tabela de posts
 Post.belongsTo(Usuario);
 
+// CRUD //
 (
     async () => {
         // Sincronizando o banco de dados
